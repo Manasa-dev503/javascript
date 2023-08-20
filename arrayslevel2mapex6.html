@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*For the Given array: [23,34,54,10,34,7,23,10,34] print the total number of times an element found in the array. Given number: 23, Expected output: 2 Given number: 34, Expected output: 3 Given number: 10, Expected output: 2 Given number: 54, Expected output: 1*/
+    var ar = [23,34,54,10,34,7,23,10,34];
+    var ar1 = +prompt();
+    var s = ar.reduce(function(accumulator,value){
+        if(value===ar1){
+            accumulator+=1;
+        }
+        return accumulator;
+
+
+
+    },0);
+    console.log(s)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*For the Given array: [23,34,54,10,4,7] print the minimum number in an Array. Expected output: 4*/
+        var ar = [23,34,54,10,4,7];
+        var x = ar.reduce(function(accumulator,value){
+            if(value<accumulator){
+                accumulator = value;
+                
+            }
+            return accumulator;
+
+        },Infinity);
+        console.log(x)
+        
+        
+
+    </script>
+</body>
+</html>

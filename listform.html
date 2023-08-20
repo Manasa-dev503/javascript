@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="uname" name="uname">
+    <button type="button" onclick="abc()">Add Student</button>
+    <div>
+        <ul id="dd"></ul>
+    </div>
+    <script>
+        var z = document.getElementById("dd")
+        var x = document.getElementById("uname")
+        ar=[]
+        function abc(){
+            ar.push(x.value)
+            displaylist();
+        }
+        function displaylist(){
+            ar.forEach(function(value,index){
+                var list = document.createElement("li")
+                list.innerHTML=value
+                var del = document.createElement("button")
+                del.innerHTML="delete"
+                list.appendChild(del)
+                z.appendChild(del)
+                del.onclick=function(){
+                    ar.splice(index,1);
+                    z.innerHTML="";
+                    displaylist();
+                }
+                z.appendChild(list)
+
+            })
+        }
+        displaylist();
+     
+
+
+
+
+
+    </script>
+</body>
+</html>

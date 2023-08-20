@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1 style="color: red;">Add Students</h1>
+        <label style="color: red;"></label><input type="text" name="sname" id="sname">
+        <button onclick="abc()" style="background-color: orange;">Add student</button><br><br>
+        <div style="display: inline-block; text-align: left;">
+            <ul id="dd"></ul>
+        </div>
+    </center>
+    <script>
+    var students=[];
+    var index=0
+    var z = document.getElementById("dd")
+    function abc(){
+        var x = document.getElementById("sname").value
+        students[index]=x
+        var y = document.createElement("li")
+        y.innerHTML=students[index]
+        z.appendChild(y)
+        index++;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Enhanced Object Literal*/
+        var firstname = "manasa"
+        var lastname = "bathina"
+        var pincode = 523001
+        console.log({firstname,lastname,pincode})
+        
+        var obj2 = {
+            name : "manasa",
+            town : "ongole",
+            pincode : 523001
+        }
+        obj2.mandal = "Tangutur"
+        console.log(obj2)
+
+        var ob = {
+            firstname : "manasa",
+            lastname : "bathina"
+        }
+        Object.freeze(ob)
+        var pincode = 523001
+        console.log({...ob,pincode})
+
+
+        var ob4 = {
+            firstname : "Manasa",
+            address : "Ongole",
+            pincode : 523001,
+            district : "Prakasam"
+        }
+        var ob5 = {
+            firstname : "Smiley",
+            address : "Guntur",
+            district : "Guntur"
+        }
+        var x = {...ob4,...ob5}
+        console.log(x)
+
+        var obj3 = {
+            firstname : "Manasa",
+            address : "Ongole",
+            pincode : 523001,
+            district : "Prakasam"
+        }
+        Object.freeze(obj3)
+        var obj4 = {
+            firstname : "Smiley",
+            address : "Guntur",
+            district : "Guntur"
+        }
+        obj3 = {...obj3,...obj4}
+        console.log(obj3)
+
+        var obj5 = {
+            firstname: "manasa",
+            lastname: "bathina"
+        }
+        Object.freeze(obj5)
+        var pincode = 523001
+        obj5 = {...obj5.pincode}
+        console.log(obj5)
+
+        var a = "manasa";
+        var b = "bathina";
+        var c = "523001";
+        var obj = {a,b,c}
+        console.log(obj)
+
+        var p = "smiley";
+        var q = "hyderabad";
+        var obj = {p,543212:"jaya",[145+2]:523272}
+        console.log(obj)
+
+
+
+    </script>
+    
+</body>
+</html>

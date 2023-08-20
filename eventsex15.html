@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red; text-align: center;">Change background color of box using buttons</h1>
+    <center><div id="dd" style="border: 1px solid; width: 200px; height: 200px";></div></center><br><br>
+    <center><button id="df" onclick="abc()">On</button>
+    <button id="dg" onclick="def()">Off</button></center>
+    <script>
+        var x = document.getElementById("df")
+        x.style.backgroundColor="orange"
+        var y = document.getElementById("dg")
+        y.style.backgroundColor="orange"
+        var z = document.getElementById("dd")
+        function abc(){
+            if(x.innerHTML==="On"){
+                z.style.backgroundColor="yellow"
+                x.style.backgroundColor="red"
+                y.style.backgroundColor="white"
+            }
+
+            
+        }
+        function def(){
+            if(y.innerHTML==="Off"){
+                z.style.backgroundColor="white"
+                y.style.backgroundColor="red"
+                x.style.backgroundColor="white"
+            }
+        }
+            
+        
+
+    </script>
+</body>
+</html>

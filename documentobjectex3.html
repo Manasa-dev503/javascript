@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <ul>
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Orange</li>
+     </ul>
+</head>
+<body>
+    <script>
+        /*Store the texts of each li element in an array.*/
+        var br = [];
+        var x = document.getElementsByTagName("li");
+        for(var i=0;i<=x.length-1;i++){
+            br.push(x[i].innerHTML)
+        }
+        console.log(br)
+        
+
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1 style="color: red;">Add Students</h1>
+        <label style="color: red;"></label><input type="text" name="sname" id="sname">
+        <button onclick="abc()" style="background-color: orange;">Add student</button><br><br>
+        <div style="display: inline-block; text-align: left;">
+            <ul id="dd"></ul>
+        </div>
+    </center>
+    <script>
+    var students=[];
+    var index=0
+    function abc(){
+        var x = document.getElementById("sname").value
+        students.push(x)
+        var stulist = '<ul style="display:inline-block;">'
+            for(var s of students){
+                stulist+='<li>'+s+'</li>'
+            }
+            stulist+='</ul>'
+        document.getElementById("dd").innerHTML=stulist
+        
+    }
+    </script>
+    
+</body>
+</html>

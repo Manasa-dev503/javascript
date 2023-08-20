@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*12.Print the highest scored subject.*/
+        var marks = {
+            "maths" : 34,
+            "english" : 56,
+            "science": 32,
+            "hindi" : 75,
+            "social science": 65
+        };
+        for(var k in marks){
+            if(marks[k]>70){
+                console.log(k)
+
+            }
+        }
+        var max = -Infinity
+        for(var k in marks){
+            if(marks[k]>max){
+                max=marks[k]
+            }
+        }
+        console.log(max)
+        var min = Infinity
+        for(var k in marks){
+            if(marks[k]<min){
+                min=marks[k]
+            }
+        }
+        console.log(min)
+        var max = -Infinity
+        var maxsub;
+        for(var k in marks){
+            if(marks[k]>max){
+                max=marks[k]
+                maxsub=k
+            }
+        }
+        console.log(maxsub)
+        var min = Infinity
+        var minsub;
+        for(var k in marks){
+            if(marks[k]<min){
+                min=marks[k]
+                minsub=k
+            }
+        }
+        console.log(minsub)
+       
+
+        
+
+
+
+
+
+
+        /*
+        /*13.Check whether the student has passed in all the subjects or not.
+        var marks = {
+            "maths" : 34,
+            "english" : 56,
+            "science": 32,
+            "hindi" : 75,
+            "social science": 65
+        };
+        for(var k in marks){
+            if(marks[k]>35){
+                console.log(marks[k])
+                console.log("pass")
+               
+            }else{
+                console.log(marks[k])
+                console.log("fail")
+            }
+        }
+        */
+
+    </script>
+</body>
+</html>

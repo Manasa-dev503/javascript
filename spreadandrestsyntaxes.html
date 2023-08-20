@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*var ar = [10,20,46,89,45]
+        console.log(...ar)*/
+
+        /*function add(a,b,c){
+            console.log(a+b+c);
+        }
+        add(10,20,30)*/
+
+        /*function add(b,...a){
+            console.log(a+b)
+        }
+        add([10,20],30)*/
+
+
+        /*var ar = [2,13,17,23,56]
+        var b = 67;
+        ar = [...ar,b]
+        console.log(ar)*/
+
+
+        /*Push a number into an array when the array is immutable*/
+        var ar = [2,13,23,56,46]
+        Object.freeze(ar)
+        ar = [...ar,67]
+        console.log(ar)
+        
+    </script>
+</body>
+</html>

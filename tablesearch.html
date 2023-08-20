@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="search" onkeyup="abc()"><br><br>
+    <div id="d1"></div>
+    <script>
+        var people = [
+    {
+        "firstname": "praveen",
+        "lastname": "gubbala",
+        "age": 36,
+        "gender": "male",
+    },
+    {
+        "firstname": "srikanth",
+        "lastname": "gubbala",
+        "age": 32,
+        "gender": "male",
+    },
+    {
+        "firstname": "pradeep",
+        "lastname": "reddy",
+        "age": 21,
+        "gender": "male",
+    },
+    {
+        "firstname": "mounika",
+        "lastname": "mudiraj",
+        "age": 20,
+        "gender": "female",
+    },
+    {
+        "firstname": "riya",
+        "lastname": "bhadouria",
+        "age": 14,
+        "gender": "female",
+    }
+];
+var t=document.createElement("table")
+t.style.border="1px solid"
+var o=document.createElement('thead')
+var j=document.createElement('tfoot')
+var x=document.createElement("tr")
+var y=document.createElement("th")
+y.style.border="1px solid"
+y.innerHTML="Firstname"
+var y1=document.createElement("th")
+y1.style.border="1px solid"
+y1.innerHTML="Lastname"
+var y2=document.createElement("th")
+y2.style.border="1px solid"
+y2.innerHTML="Age"
+var y3=document.createElement("th")
+y3.style.border="1px solid"
+y3.innerHTML="Gender"
+x.appendChild(y)
+x.appendChild(y1)
+x.appendChild(y2)
+x.appendChild(y3)
+o.appendChild(x)
+t.appendChild(x)
+t.appendChild(o)
+t.appendChild(j)
+function table(){
+    j.innerHTML=""
+    people.forEach(function(values,index){
+        var x1=document.createElement("tr")
+        var z=document.createElement("td")
+        z.style.border="1px solid"
+        z.innerHTML=values.firstname
+        var z1=document.createElement("td")
+        z1.style.border="1px solid"
+        z1.innerHTML=values.lastname
+        var z2=document.createElement("td")
+        z2.style.border="1px solid"
+        z2.innerHTML=values.age
+        var z3=document.createElement("td")
+        z3.style.border="1px solid"
+        z3.innerHTML=values.gender
+        x1.appendChild(z)
+        x1.appendChild(z1)
+        x1.appendChild(z2)
+        x1.appendChild(z3)
+        t.appendChild(x1)
+        j.appendChild(x1)
+        var d=document.getElementById("d1")
+        d.appendChild(t)
+   
+})
+}
+table()
+function abc(){
+    var d1 = document.getElementById("d1")
+    d1.innerHTML=""
+    var search = document.getElementById("search").value
+    var t=document.createElement("table")
+    t.style.border="1px solid"
+    var o=document.createElement('thead')
+    var j=document.createElement('tfoot')
+    var x=document.createElement("tr")
+    var y=document.createElement("th")
+    y.style.border="1px solid"
+    y.innerHTML="Firstname"
+    x.appendChild(y)
+    var y1=document.createElement("th")
+    y1.style.border="1px solid"
+    y1.innerHTML="Lastname"
+    x.appendChild(y1)
+    var y2=document.createElement("th")
+    y2.style.border="1px solid"
+    y2.innerHTML="Age"
+    x.appendChild(y2)
+    var y3=document.createElement("th")
+    y3.style.border="1px solid"
+    y3.innerHTML="Gender"
+    x.appendChild(y3)
+    o.appendChild(x)
+    t.appendChild(o)
+    t.appendChild(j)
+    t.appendChild(x)
+    var tbody = document.createElement("tbody")
+    people.filter(function(row,index){
+        if(row.firstname.startsWith(search)){
+            var x1=document.createElement("tr")
+            var z=document.createElement("td")
+            z.style.border="1px solid"
+            z.innerHTML=row.firstname
+            x1.appendChild(z)
+            var z1=document.createElement("td")
+            z1.style.border="1px solid"
+            z1.innerHTML=row.lastname
+            x1.appendChild(z1)
+            var z2=document.createElement("td")
+            z2.style.border="1px solid"
+            z2.innerHTML=row.age
+            x1.appendChild(z2)
+            var z3=document.createElement("td")
+            z3.style.border="1px solid"
+            z3.innerHTML=row.gender
+            x1.appendChild(z3)
+            tbody.appendChild(x1)
+            t.appendChild(tbody)
+            d1.appendChild(t)
+            
+
+        }
+
+    })
+
+}
+    </script>
+</body>
+</html>

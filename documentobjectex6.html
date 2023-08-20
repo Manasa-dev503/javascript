@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h1 id="dd"></h1>
+    
+</head>
+<body>
+    <script>
+        /* Create one h1 element,put some text into it and apply red font color to it*/
+        var x = document.createElement("h1");
+        x.innerHTML="Hello DOM World!";
+        var y = document.getElementById("dd")
+        y.appendChild(x)
+        y.style.color="red"
+        console.log(x.innerHTML)
+
+    </script>
+    
+</body>
+</html>

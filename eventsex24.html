@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <center><h1 style="color: red;">Add Contact Cards</h1>
+        <label style="color: red;">Name</label><input type="text" name="sname" id="sname"><br><br>
+        <label style="color: red;">Number</label><input type="number" name="snum" id="snum"><br><br>
+        <label style="color: red;">Email</label><input type="email" name="semail" id="semail"><br><br>
+        <label style="color: red;">Enter Image URL</label><input type="text" name="imgurl" id="imgurl"><br><br>
+        <button onclick="abc()" style="color: black; background-color: orange;">Add Contact</button>
+        <br><br>
+
+    
+    <div id="dd"></div>
+    
+</center>
+    <script>
+        var ar = []
+        var d1 = document.getElementById("dd")
+        d1.style.backgroundColor="yellow"
+        d1.style.border="1px solid red"
+        d1.style.fontSize="large"
+        d1.style.padding="10"
+        d1.style.color="red"
+        d1.style.width="200px"
+        d1.style.height="150px"
+        d1.style.display="none"
+        function abc(){
+            var x = document.getElementById("sname").value
+            var y = document.getElementById("snum").value
+            var z = document.getElementById("semail").value
+            var u = document.getElementById("imgurl").value
+            ar.push("<img src='"+u+"' width='30' height='30' padding='20'>")
+            ar.push(x)
+            ar.push(y)
+            ar.push(z)
+            var conctlist = '<ul style="display:inline-block;">'
+                for(var s of ar){
+                    conctlist+='<li>'+s+'</li>'/*`<li>${s}</li>`*/
+                }
+                conctlist+='</ul>'
+                if(d1.style.display=="none"){
+                    d1.style.display="block"
+                }
+            
+            
+            document.getElementById("dd").innerHTML=conctlist
+            
+
+
+            
+        }
+    </script>
+</body>
+</html>

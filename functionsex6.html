@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Write a function which can check a given number is prime number or not*/
+        function prime(n){
+            var flag=false;
+            for(i=2;i<n/2;i++){
+                if(n%i==0){
+                    flag=true;
+                    break;
+                }
+
+            }
+            if(flag==true){
+                return "not prime"
+            }else{
+                return "prime"
+            }
+           
+    }
+    var k = prime(15);
+    console.log(k)
+    </script>
+</body>
+</html>

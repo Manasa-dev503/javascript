@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="uname" name="uname" placeholder="Enter username">
+        <input type="number" id="age" name="age" placeholder="Enter age">
+        <button type="button" onclick="abc()">Add person</button>
+    </form><br><br>
+    <div id="dd"></div>
+    <script>
+        var dd = document.getElementById("dd")
+        var tabledata = document.createElement('table')
+        tabledata.style.borderStyle="solid"
+        tabledata.style.borderColor="black"
+        tabledata.style.width="25%"
+        //tabledata.setAttribute("cellspacing","0px")
+        var tablehead = document.createElement("tr")
+        tablehead.style.textAlign="left"
+        tablehead.style.backgroundColor="gray"
+        var col1 = document.createElement("th")
+        col1.innerHTML="Person"
+        var col2 = document.createElement("th")
+        col2.innerHTML="Age"
+        tablehead.appendChild(col1)
+        tablehead.appendChild(col2)
+        tabledata.appendChild(tablehead)
+        dd.appendChild(tabledata)
+        function abc(){
+            var x = document.getElementById("uname").value
+            var y = document.getElementById("age").value
+            var tablerow = document.createElement("tr")
+            var column1 = document.createElement("td")
+            column1.style.backgroundColor="gray"
+            column1.style.textAlign="left"
+            column1.innerHTML=x
+            var column2 = document.createElement("td")
+            column2.style.textAlign="right"
+            column2.innerHTML=y
+            tablerow.appendChild(column1)
+            tablerow.appendChild(column2)
+            tabledata.appendChild(tablerow)
+            dd.appendChild(tabledata)
+        }
+    </script>
+</body>
+</html>

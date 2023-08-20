@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="uname" name="uname" placeholder="Enter username">
+        <input type="number" id="age" name="age" placeholder="Enter age">
+        <input type="text" name="gender" id="gender" placeholder="Gender">
+        <button type="button" id="btn" onclick="abc()">Add person</button>
+    </form><br><br>
+    <div id="dd"></div>
+    <script>
+        var dd = document.getElementById("dd")
+        var table = document.createElement("table")
+        table.style.width="25%"
+        table.style.border="1px solid"
+        table.style.borderColor="black"
+        var tablehead = document.createElement("tr")
+        var col1 = document.createElement("th")
+        col1.innerHTML = "Name"
+        var col2 = document.createElement("th")
+        col2.innerHTML = "Age"
+        var col3 = document.createElement("th")
+        col3.innerHTML = "Gender"
+        var col4 = document.createElement("th")
+        col4.innerHTML = "action"
+        tablehead.appendChild(col1)
+        tablehead.appendChild(col2)
+        tablehead.appendChild(col3)
+        tablehead.appendChild(col4)
+        table.appendChild(tablehead)
+        dd.appendChild(table)
+        ar = []
+        function abc(){
+            var x = document.getElementById("uname").value
+            var y = document.getElementById("age").value
+            var z = document.getElementById("gender").value
+            var u = document.getElementById('btn').value
+            var tablerow = document.createElement("tr")
+            var column1 = document.createElement("td")
+            column1.innerHTML=x
+            var column2 = document.createElement("td")
+            column2.innerHTML=y
+            var column3 = document.createElement("td")
+            column3.innerHTML=z
+            var column4 = document.createElement("button")
+            column4.innerHTML="Delete"
+            tablerow.appendChild(column1)
+            tablerow.appendChild(column2)
+            tablerow.appendChild(column3)
+            tablerow.appendChild(column4)
+            table.appendChild(tablerow)
+            ar.push(x)
+            ar.push(y)
+            ar.push(z)
+            ar.push(u)
+            dd.appendChild(table)
+            ar.forEach(function(value,index){
+                var column4 = document.createElement("button")
+                column4.innerHTML="Delete"
+                column4.onclick=function(){
+                    ar.splice(index,1)
+                    dd.innerHTML=""
+                   
+                }
+
+            })
+        }
+    
+
+
+
+    </script>
+    
+</body>
+</html>

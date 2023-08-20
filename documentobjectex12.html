@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="a2"></div>
+    <script>
+    var a2=document.getElementById("a2")
+    var ol= document.createElement("ol")
+    var students = [		
+        {
+            "firstname": "praveen",
+            "age": 36,
+            "subjects":['angular','nodejs','reactjs','java']
+        }, 
+        {
+            "firstname": "srikanth",
+            "age": 32,
+            "subjects":['react','mongodb']
+        }, 
+        {
+            "firstname": "pradeep",
+            "age": 21,
+            "subjects":['express','mongoose','python']
+        }
+    ]
+    var y=document.createElement("li")
+    var c=document.createElement("ol")
+    var a=document.createElement("li")
+    var b=document.createElement("li")
+    var d=document.createElement("li")
+    y.innerHTML=students[0].firstname
+    a.innerHTML=students[0].subjects[0]
+    b.innerHTML=students[0].subjects[1]
+    d.innerHTML=students[0].subjects[2]
+    ol.appendChild(y)
+    c.appendChild(a)
+    c.appendChild(b)
+    c.appendChild(d)
+    ol.appendChild(c)
+    a2.appendChild(ol)
+    var y=document.createElement("li")
+    var c=document.createElement("ol")
+    var a=document.createElement("li")
+    var b=document.createElement("li")
+    y.innerHTML=students[1].firstname
+    a.innerHTML=students[1].subjects[0]
+    b.innerHTML=students[1].subjects[1]
+    ol.appendChild(y)
+    c.appendChild(a)
+    c.appendChild(b)
+    ol.appendChild(c)
+    a2.appendChild(ol)
+    var y=document.createElement("li")
+    var c=document.createElement("ol")
+    var a=document.createElement("li")
+    var b=document.createElement("li")
+    var d=document.createElement("li")
+    y.innerHTML=students[2].firstname
+    a.innerHTML=students[2].subjects[0]
+    b.innerHTML=students[2].subjects[1]
+    d.innerHTML=students[2].subjects[2]
+    ol.appendChild(y)
+    c.appendChild(a)
+    c.appendChild(b)
+    c.appendChild(d)
+    ol.appendChild(c)
+    a2.appendChild(ol)
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    
+    
+</head>
+<body>
+     <ul id="dd">
+        
+    </ul>
+    
+    <script>
+        /*Take an array of names and create a list from it.*/
+        ar = ["ramesh","suresh","praveen","gopi","sunil"]
+        var y = document.getElementById("dd");
+        ar.forEach(function(value){
+            var x = document.createElement("li");
+            x.innerHTML=value
+            y.appendChild(x)
+            console.log(x.innerHTML)
+        });
+
+
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>

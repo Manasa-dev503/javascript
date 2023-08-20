@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <button onclick="abc()">Increment</button>
+    <span id="dd"></span>
+    <button onclick="def()">Decrement</button>
+    <script>
+        /*
+        /*<span id="dd">0</span>
+        count=0;
+        
+        function abc(){
+            count+=1;
+            var x = document.getElementById("dd");
+            
+            x.innerHTML=count
+        }
+        function def(){
+            count-=1;
+            var x = document.getElementById("dd");
+            x.innerHTML=count
+        }*/
+        count=0;
+        var x = document.getElementById("dd");
+        x.innerHTML=count
+        function abc(){
+            count+=1
+            x.innerHTML=count
+        }
+        function def(){
+            count-=1
+            x.innerHTML=count
+        }
+
+
+    </script>
+
+    
+</body>
+</html>

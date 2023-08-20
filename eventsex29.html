@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" disabled id="mytb"><br>
+    <button onclick="enabletb()">Enable the text box</button>
+    <script>
+        function enabletb(){
+            var mytb = document.getElementById("mytb")
+            if(mytb.disabled){
+                mytb.disabled=false
+            }
+        }
+    </script>
+    
+</body>
+</html>

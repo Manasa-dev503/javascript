@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1 style="color: red;">Show images using URL</h1>
+        <label style="color: red;">Enter image URL</label><input type="text" name="imgurl" id="imgurl"><br><br>
+        <button onclick="abc()" style="background-color: orange;">Add image</button>
+    </center>
+    <div id="dd"></div>
+    <script>
+        var imgs=[]
+        i=0
+        var x = document.getElementById("imgurl")
+        var z = document.getElementById("dd")
+        function abc(){
+            imgs.push(x.value)
+            z.innerHTML=""
+            imgs.forEach(function(value){
+                var img = document.createElement("img")
+                img.style.width="200px"
+                img.src = value
+                z.appendChild(img)
+            })
+        }
+    </script>
+</body>
+</html>

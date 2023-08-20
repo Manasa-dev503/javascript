@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="abc()">Ascending</button>
+    <button onclick="def()">Descending</button>
+    <br><br>
+    <div id="dd"></div>
+    <script>
+        ar = ["ramesh","suresh","praveen","gopi","sunil"]
+        function abc(){
+            
+        }
+        var y = document.getElementById("dd");
+        ar.forEach(function(value){
+            var x = document.createElement("li");
+            x.innerHTML=value
+            y.appendChild(x)
+            console.log(x.innerHTML)
+        });
+    </script>
+</body>
+</html>

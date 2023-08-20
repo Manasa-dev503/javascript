@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <center><h1 style="color: red;">Image Carousel</h1>
+        <img id="dd" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAuDKm-VnHppWQ_reos6qquZDXPLW1pOWuLQ&usqp=CAU"><br><br>
+        <button onclick="abc()" style="background-color: orange;">prev</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button onclick="def()" style="background-color: orange;">Next</button>
+    </center>
+    <script>
+        var ar = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAuDKm-VnHppWQ_reos6qquZDXPLW1pOWuLQ&usqp=CAU","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThgA47GHL35jZlaar8KhowAFHlzGWNQ2CDrg&usqp=CAU","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSfTQW3H83vtYVb0ZJH2hE-xpoD6M7yk3ucg&usqp=CAU"]
+        var i = 0 ;
+        var x = document.getElementById("dd")
+        function abc(){
+            if(i===ar.length-1){
+                i=0;
+                x.src=ar[i]
+
+            }else{
+                i++;
+                x.src=ar[i]
+            }
+        }
+        function def(){
+            if(i===0){
+                i=ar.length-1
+                x.src=ar[i]
+            }else{
+                i--;
+                x.src=ar[i]
+
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*For the given marks object solve the following
+    1.Print the marks of all the subjects.
+    2.Print the names of all the subjects from the given object.
+    3.Count the number of subjects from the given object.
+    4.Print the percentage of the marks of the student.
+    5.Print only those subjects where the student scored more than 35.
+    6.Print the pass/fail status of the subjects provided 35 is the pass mark.
+    7.Print only the passed subjects.
+    8.Count the number of passed subjects.
+    9.Print only the failed subjects.
+    10.Count the number of failed subjects.
+    11.Print the least scored subject.
+    12.Print the highest scored subject.
+    13.Check whether the student has passed in all the subjects or not.
+    14.Take the subject name from the student through prompt box and print the subject marks and pass/fail status*/
+    var marks = {
+        "maths" : 34,
+        "english" : 56,
+        "science": 32,
+        "hindi" : 75,
+        "social science": 65
+    };
+    for(var k in marks){
+        console.log(marks[k])
+    }
+    for(var k in marks){
+        console.log(k)
+    }
+    console.log(Object.keys(marks).length)
+    var sum = 0;
+    var len = 0;
+    for(const ele in marks){
+        sum += marks[ele];
+        len++;
+    }
+    console.log(sum/(len*100)*100)
+    for(var k in marks){
+        if(marks[k]>35){
+            console.log(marks[k])
+        }
+    }
+    for(var k in marks){
+        if(marks[k]>35){
+            console.log("pass")
+        }else{
+            console.log("fail")
+        }
+        console.log(marks[k])
+    }
+    for(var k in marks){
+        if(marks[k]>35){
+            console.log(k)
+        }
+    }
+    for(var k in marks){
+        if(marks[k]>35){
+            console.log(Object.keys(marks).length)
+        }
+    }
+    for(var k in marks){
+        if(marks[k]<35){
+            console.log(k)
+        }
+    }
+    for(var k in marks){
+        if(marks[k]<35){
+            console.log(Object.keys(k).length)
+        }
+    }
+    for(var k in marks){
+        if(marks[k]<34 && marks[k]>30){
+            console.log(k)
+        }
+    }
+</script>
+</body>
+</html>

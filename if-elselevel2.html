@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Write a program to print the greatest number in given three numbers*/
+        var a = 30;
+        var b = 90;
+        var c = 180;
+        if(a>b){
+            if(a>c){
+                console.log(a)
+            }else{
+                console.log(c)
+            }
+        }else{
+            if(b>c){
+                console.log(b)
+            }else{
+                console.log(c)
+            }
+            
+        }
+        /*Write a program to print the least number in given three numbers*/
+        var a = 100;
+        var b = 20;
+        var c = 60;
+        if(a<b){
+            if(a<c){
+                console.log(a)
+            }else{
+                console.log(c)
+            }
+        }else{
+            if(b<c){
+                console.log(b)
+            }else{
+                console.log(c)
+            }
+        }
+        /*Write a program to print the given three numbers in ascending order*/
+        var a = 10;
+        var b = 30;
+        var c = 20;
+        if(a<b && a<c){
+            console.log(a);
+            if(b<c){
+                console.log(b,c)
+            }else{
+                console.log(c,b)
+            }
+        }else if(b<a && b<c){
+            console.log(b);
+            if(a>c){
+                console.log(a,c)
+            }else{
+                console.log(c,a)
+            }
+        }else{
+            console.log(c);
+            if(a>b){
+                console.log(a,b)
+            }else{
+                console.log(b,a)
+            }
+            console.log(a,b,c)
+        }
+        
+        
+        
+        
+       
+        /*Write a program to print the given three numbers in descending order*/
+        var a = 10;
+        var b = 30;
+        var c = 20;
+        if(a>b && a>c){
+            console.log(a);
+            if(b>c){
+                console.log(b,c)
+            }else{
+                console.log(c,b)
+            }
+        }else if(b>a && b>c){
+            console.log(b);
+            if(a>c){
+                console.log(a,c)
+            }else{
+                console.log(c,a)
+            }
+        }else{
+            console.log(c);
+            if(a>b){
+                console.log(a,b)
+            }else{
+                console.log(b,a)
+            }
+        }
+        
+        /*Write a program to take marks of three subjects and print the grade of student*/
+        var subject1 = 60;
+        var subject2 = 80;
+        var subject3 = 100;
+        total = subject1+subject2+subject3;
+        if(total<250){
+            if(total<200){
+                console.log("B");
+            }else{
+                console.log("C");
+            }
+
+        }else{
+            console.log("A")
+        }
+        /*Check whether a number is negative, positive or zero.*/
+        var a = -10;
+        if(a>=0){
+            console.log("Positive number");
+        }else if(a<0){
+            console.log("Negative number");
+        }else if(a=0){
+            console.log("Zero")
+        }
+        /*Check whether a number is divisible by 5 and 11 or not.*/
+        var a = 58;
+        if((a%5==0)&&(a%11==0)){
+            console.log("YES");
+        }else{
+            console.log("NO")
+        }
+
+
+    </script>
+</body>
+</html>

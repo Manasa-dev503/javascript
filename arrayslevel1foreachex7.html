@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Print only the last 4 elements of an array. Expected output: 54 0 4 7*/
+        var ar = [23,34,54,0,4,7];
+        ar.forEach(function(value,index){
+            if(index>=ar.length-4){
+                console.log(value)
+            }
+
+        });
+        /*var s = ar.splice(2,4)
+        console.log(s)*/
+
+    </script>
+</body>
+</html>

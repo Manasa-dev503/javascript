@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1 style="color: red;">Add Contact Cards</h1>
+        <label style="color: red;">Name</label><input type="text" name="username" id="username"><br><br>
+        <label style="color: red;">Number</label><input type="number" name="mno" id="mno"><br><br>
+        <label style="color: red;">Email</label><input type="email" name="mail" id="mail"><br><br>
+        <label style="color: red;">Enter Image URL</label><input type="text" name="imgurl" id="imgurl"><br><br>
+        <button onclick="abc()" type="button" style="color: black; background-color: orange;">Add Contact</button>
+    </center>
+    <div id="dd"></div>
+    <script>
+        var username = document.getElementById("username").value
+        var mno = document.getElementById("mno").value
+        var mail = document.getElementById("mail").value
+        var imgurl = document.getElementById("imgurl").value
+        var x = document.getElementById("dd")
+        var contacts = []
+        function Gencard(){
+            x.innerHTML=""
+            contacts.forEach(function(value,index){
+                var y = document.createElement("div")
+                y.style.boxSizing="borderbox"
+                y.style.border="2px solid red"
+                y.style.backgroundColor="yellow"
+                y.style.color="red"
+                y.style.width="250px"
+
+
+            })
+            
+
+
+        }
+    
+        
+        
+
+    </script>
+</body>
+</html>
+    

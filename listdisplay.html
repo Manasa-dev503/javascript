@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="uname">
+    <button type="button" onclick="abc()">Click</button>
+    <ul id="dd">
+
+    </ul>
+    <script>
+        var ar = ['mango','apple','orange','banana','pineapple','guava','aeroplane','ant','board']
+        var dd = document.getElementById("dd")
+        var uname = document.getElementById("uname")
+        ar.forEach(function(value,index){
+            var x = document.createElement("li")
+            x.innerHTML=value
+            dd.appendChild(x)
+        })
+        function abc(){
+            dd.innerHTML=""
+            ar.forEach(function(value,index){
+                var y = document.createElement("li")
+                if(uname.value===value.slice(0,1)){
+                    y.innerHTML=value
+                    dd.appendChild(y)
+                }
+                })
+            }
+
+            
+        
+
+        
+            
+
+
+        
+
+            
+            
+
+        
+
+    </script>
+</body>
+</html>

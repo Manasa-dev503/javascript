@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <button onclick="abc()">Show Table</button>
+    <div id="d3"></div>
+    <div id="df"></div>
+    <script>
+        function abc(){
+            var z = document.getElementById("df")
+            var d3=document.getElementById("d3")
+            var x=document.createElement("table")
+            x.style.border="1px solid"
+            var ar1=[{name: "Praveen",Age:36,Gender:"male",City:"100000",Salary:"hyd"},
+            {name: "srikanth",Age:32,Gender:"male",City:"200000",Salary:"banglore"},
+            {name: "pradeep",Age:21,Gender:"male",City:"250000",Salary:"hyd"},
+            {name: "mounika",Age:20,Gender:"female",City:"300000",Salary:"nalgonda"},
+            {name: "nikil",Age:22,Gender:"male",City:"2000",Salary:"guntur"},
+            {name: "riya",Age:14,Gender:"female",City:"400000",Salary:"indore"}]
+            var y=document.createElement("tr")
+            var ar=["Name","Age","Gender","Salary","City"]
+            ar.forEach(function(value){
+                var d=document.createElement("th")
+                d.innerHTML=value;
+                d.style.border="1px solid"
+                d.style.textAlign="center"
+                y.appendChild(d)
+                x.appendChild(y)
+                d3.appendChild(x)
+            })
+            ar1.forEach(function(value){
+                var a=document.createElement("tr")
+                a.style.border="1px solid black"
+                var b=document.createElement("td")
+                b.style.border="1px solid black"
+                var c=document.createElement("td")
+                c.style.border="1px solid black"
+                var p=document.createElement("td")
+                p.style.border="1px solid black"
+                var r=document.createElement("td")
+                r.style.border="1px solid black"
+                var s=document.createElement("td")
+                s.style.border="1px solid black"
+                b.innerHTML=value.name
+                c.innerHTML=value.Age
+                p.innerHTML=value.Gender
+                r.innerHTML=value.Salary
+                s.innerHTML=value.City
+                a.appendChild(b)
+                a.appendChild(c)
+                a.appendChild(p)
+                a.appendChild(r)
+                a.appendChild(s)
+                x.appendChild(a)
+                d3.appendChild(x)
+            })
+        }
+    </script>
+    
+</body>
+</html>
