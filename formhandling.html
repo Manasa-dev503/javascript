@@ -3,6 +3,8 @@
     <body>
         <h1 id="dd">Welcome to Hyderabad</h1>
         <input type="text" onkeyup="abc()" id="d1"/>
+        <input type="password" id="d2">
+        <button onclick="pqr()">click</button>
         <script>
             var x = document.getElementById("dd")
            var msg = x.innerHTML
@@ -11,6 +13,20 @@
                 x.innerHTML="hi"+y.value+", "+msg
                 
                 
+            }
+            function pqr(){
+                var d2 = document.getElementById('d2')
+                if(d2.type==="password"){
+                    d2.type="text"
+
+                }
+                else{
+                    d2.type="password"
+                }
+                
+
+
+
             }
 
         </script>
