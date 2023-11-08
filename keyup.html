@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body>
+        <h1 id="dd">Welcome to Hyderabad</h1>
+        <input type="text" onkeyup="abc()" id="d1"/>
+        <script>
+            var x = document.getElementById("dd")
+           var msg = x.innerHTML
+            function abc(){
+                var y  = document.getElementById('d1')
+                x.innerHTML="hi"+y.value+", "+msg
+                
+                
+            }
+
+        </script>
+        
+    </body>
+</html>
